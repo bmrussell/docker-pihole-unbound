@@ -41,6 +41,13 @@ PIHOLE_WEBPORT=80
 WEBTHEME=default-light
 ```
 
+### DHCP
+For DHCP do not forward ports but use
+```
+network_mode: "host"
+```
+so that DHCP can broadcast. See [docs](https://docs.pi-hole.net/docker/dhcp/)
+
 ### Using Portainer stacks?
 
 > 2022-3-11: I'm being told that the advice below is no longer true in Portainer. If you're using Portainer, first try it without removing the volumes declaration and see if it works.
